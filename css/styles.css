@@ -24,6 +24,7 @@ body {
 
 h1, h2, h3 {
     font-weight: 900;
+    line-height: 1.2;
     margin: 1rem 0 4rem 0;
 }
 
@@ -206,4 +207,41 @@ img {
 .slogan p {
     margin: 0;
     line-height: 1;
+}
+
+
+/* sobre nosotros */
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-image: url(../img/nosotros.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(3, 1fr);        
+    }
+}
+
+@media (min-width: 1440px) {
+    .nosotros {    
+        background-position: bottom center;     
+    }
+}
+
+
+.contenido-nosotros {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        grid-column: 2/4;
+    }
+}
+.contenido-nosotros h2,
+.contenido-nosotros p {
+    margin-bottom: 1rem;
 }
